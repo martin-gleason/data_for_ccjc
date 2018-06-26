@@ -1,0 +1,257 @@
+---
+title: "Notes on Data 101"
+author: "Martin Gleason, MS"
+output: 
+ html_document:
+  theme: null
+  css: pro_presentation.css
+  self_contained: no
+---
+
+```{r, packages, include=T, echo=FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(lubridate)
+library(kableExtra)
+library(viridis)
+library(plotly)
+library(xaringan)
+source("/Users/marty/Dropbox (Personal)/Coding Projects/R/DataScience for the Court 101/normal_height.R") 
+# figure out how to make sure it works on windows or mac
+
+```
+
+# Data Literacy: A Data 101 Training for Juvenile Probation Staff
+`r today() %>% format("%m-%d-%y")`
+
+#Training Ground Rules
+*  Take care of your clients and cases  
+*  Two breaks are built in, but get up and go if you got to go
+*  Ask questions, even ones that seem obvious
+*  Be willing to be challenged
+
+#Learning Objectives:
+*  To become fluent with the language of data
+*  To think critically about data
+*  To become familiar with the fundamentals of OUR data
+    + What we collect
+    + How we collect it
+    + Why we need it
+*  What we can do to improve our Data Quality
+*  To discover what you want to learn next
+
+# Expectations
+![What do you want to learn today?](imgs/schoolHouseRock.gif)
+
+# What Is Data?
+![What questions do you have about data?](imgs/howdoyouusedata.gif)
+
+## Excercise 1: How do you use data?
+![Bro-map](imgs/bro.gif)
+
+*  Take five minutes to note how you use personal **or** probation data
+*  Can be alone or in a group
+
+# Data or Information
+*  Data: Facts, figures, and other abstract representations of the world
+
+*  Information: Data that has been processed, given structure, and context
+
+# Do we need data?
+*  Personal Experience
+*  Professional/Clinical Judgement
+    +*Challenging it can be easily interpreted as a personal attack*
+
+
+## Fundamentals of Data
+*  Think of data and information as a new language that requires fluency
+*  **slide by slide comparison here**
+![Language](imgs/DataScienceTriangleAnalogy.jpg)
+![Data](imgs/DataScienceTriangle.jpg)
+
+# The Language of Data
+## Types of Data
+### Quantitative
+*  Discrete: only specific values matter for that data
+*  Continuous: All values
+*  *Examples?*
+  
+### Qualitative
+*  Binary: Yes/No
+*  Nominal: Names with no particular meaning
+*  Ordinal: Scores or Ranks
+*  Count/Ratio: Items per Area/Volume
+*  *Examples?*
+
+
+
+## Descriptive Statistics
+>  "Descriptive statistics are brief descriptive coefficients that summarize a given data set, which can be either a representation of the entire or sample population. Descriptive statistics are broken down into measures of central tendency and measures of variability (spread)."
+
+* Descriptive statistics describe the population or sample
+
+### Measures of Central Tendency and Variablity
+* Mean: Average
+* Median: Equal point in the distribution
+* Mode: Most Frequent number
+* Range: Minimum number to maximum number
+* Variance: How spread out the data points are
+* Standard Deviation: The distance, in the same unit, between data points
+
+### Example
+```{r, TrickQuestion_one, include= TRUE, echo = F}
+total_height_bar
+```
+
+```{r, TrickQuestion_two, include= TRUE, echo = F}
+total_height
+```
+
+```{r, trickquestionThree, include = TRUE, echo = FALSE, message = FALSE}
+bad_proof
+```
+
+### Chart Example
+```{r, badchart, include = TRUE, echo = FALSE, warning = FALSE}
+bad_height %>% kable() %>% kable_styling("striped", "bordered", full_width = TRUE)
+```
+### Excercise: How did I mislead you?
+* Look at the graphs below and point out what you would do different?
+
+```{r, side_by_side, include = TRUE, warning = FALSE, fig.show = "asis", echo = FALSE}
+total_height
+total_height_bar
+```
+
+### Correct Way to Visualize
+```{r, correct_viz, include = TRUE, echo = FALSE, message = FALSE}
+
+total_height_sex_histogram
+total_height_chart %>% kable(caption = "All Measurements in cm") %>% 
+  kable_styling("striped", "bordered", full_width = FALSE)
+  
+```
+*The previous chart and graph will be on a single slide*
+
+# Take a break
+![Be back in 10!](imgs/break.gif)
+
+# Quick Recap
+* Measures of Central Tendency.
+* Measures of Variance.
+* How to think critically about data?
+
+# The Stastical Model
+* A representation of what the data tells us
+* The goal of:
+  + Big Data
+  + Machine Learning
+  + AI
+  + **Other buzzwords?**
+
+![Animated Regression](imgs/boosting-algo-7.gif)
+
+## Four Kinds of Analytics
+* Descriptive: What
+* Diagnostic: Why? 
+* Predictive: What if?
+* Prescriptive: Best course?
+
+### Diagnostic Analytics
+* Why did this happen?
+![Do not be afraid to ask why.](imgs/why.gif)
+
+### Predictive Analytics
+* What could happen
+  + Chances of winning an election
+  + Chances of developing an illness
+  + Chance at re-offending
+  
+### Examples
+![Regression: Beyond Our Scope](imgs/superimportantoutcome.png)
+
+
+## Perscriptive  Analytics
+* What is the best course of action?
+![The Process](imgs/Prescriptive_Analytics_process.png)
+
+### Excercise: Examples of Perscriptive Statistics
+![As difficult as finding...](imgs/unicorn.gif)
+
+
+# How does we collect data or information?
+* Personal Experiences
+* TV
+* Newspapers
+* Radio
+* Conversations
+* Comparison shopping
+* Google
+
+
+# How does the Court collect data?
+* Forms
+* Reports
+* Studies
+* JEMS
+* I-Clear
+* Clerks
+* Promise
+* Databases
+* *Spreadsheets*
+
+# Tidy Data
+![Thanks Hadley!](imgs/hadley.jpg)
+
+* Each variable forms a column.
+* Each observation forms a row.
+* Each cell is atomic.
+* Each type of observational unit forms a table.
+
+# Examples of Spreadsheet USe
+* We use spreadsheets for:
+  + Collection, cleaning, results, analysis
+  + Provide structure to our data
+  + Share data/information
+  + Data Analysis
+
+# Excercise 2: Critique this spreadsheet
+![Made up data: Also a handout.](imgs/fakeSheet.png)
+
+# Excercise 2: Results 2
+* Cells are not atomic
+* Missing values
+* Variable formats within entries
+
+# Why we need data
+* Evidence Based Practices
+* Performance based budgeting
+* Risk Level and Classification
+
+
+# Where Do We Go From Here
+* We have the language, now what are the goals
+
+## Excercise
+* With your table, discuss where you want to go from here
+* Use your SMART goals!
+
+# Closing
+![Thank You](imgs/anyQuestionsDavidSPumpkins.gif)
+
+* Please fill out your evaluation forms
+* Email [martin.gleason@cookcountil.gov)](mailto: martin.gleason@cookcountil.gov) if you have questions, comments, or misgivings
+
+
+
+
+
+# Sources and Further Reading
+* [Tidy data Paper](https://vita.had.co.nz/papers/tidy-data.pdf)
+* [Data Literacy](https://www.gartner.com/webinar/3702517)
+* [Algorithmic Sentencing](https://www.wired.com/2017/04/courts-using-ai-sentence-criminals-must-stop-now/)
+* [Descriptive, predictive, prescriptive](https://halobi.com/blog/descriptive-predictive-and-prescriptive-analytics-explained/)
+* [https://twitter.com/nlj/status/1004066012063559686](https://twitter.com/nlj/status/1004066012063559686)
+* [4 kinds of analytics](https://www.kdnuggets.com/2017/07/4-types-data-analytics.html)
+* [Super Important Outcome](https://blogs.uoregon.edu/rclub/2016/04/05/plotting-your-logistic-regression-models/)
+* [Minitab: Flavors of Data](https://surfstat.anu.edu.au/surfstat-home/1-1-1.html)
+* [Statistical Model](https://en.wikipedia.org/wiki/Statistical_model)

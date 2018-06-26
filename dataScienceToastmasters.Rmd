@@ -1,0 +1,112 @@
+---
+title: 'Data Science for the Juvenile Court'
+author: "Martin Gleason, MS"
+date: "12/5/2017"
+output: slidy_presentation 
+---
+<!-- Limit image width and height -->
+<style type='text/css'>
+img {
+    max-height: 560px;
+    max-width: 964px;
+}
+</style>
+
+<!-- Center image on slide -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
+```{r, include= FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(out.width="400px", dpi=120)
+library("tidyverse")
+library("knitr")
+```
+## Ubiquity, Abstraction, Absurdity
+![Is this data?](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/Data_Outlook.jpg)
+
+## Human Driven Process
+![Spreadsheets are digital ledgers](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/ledger.jpg)
+
+## Complex But Concrete
+![Galton's Work on Regression to the mean. He was also a racist piece of garbage](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/Galton's_correlation_diagram_1875.jpg)
+
+## Cloud Computing
+![Complex AND Abstract](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/cloudcomputing.png)
+ 
+## Data science, what is it?
+![](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/datascience.jpg)
+
+## Data science, what is it?
+  * Data Science is the way we study the capture, storage, and transformation of data into information. 
+  
+  * It's that complex stuff Marty talks about all the damn time. --Toastmasters, 2017
+
+## Data Scienctists
+![Data science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge.](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/hadley.jpg) --Hadley Wickham, PhD
+  
+## Data Science is  
+![Using data to solve probelms](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/problemsolving.jpg)
+
+## Data Science Tools
+  * Scoping the problem
+  * Collecting and cleaning the data
+  * Visualizing the Data
+  * Making predictions
+
+## Data Science Heirarchy
+![Like Maslow, but for data](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/pyramnid.jpg)
+  
+## What is Social Good?
+![If we work at 1100 S Hamilton, we work for the social good](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/SocialGood.png)
+  
+## What is Data Science for the Social Good?
+![Using data science to make the world a better place.](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/Social Good 600 v1.png)
+
+## Data Science for the Social Good
+  * Identiying problemst
+  * New Solutions
+  * Reproducing it to scale
+  * What would Data Science for the Juvenile Court Look Like?
+
+
+<style type='text/css'>
+img {
+    max-height: 1120px;
+    max-width: 1928px;
+}
+</style>
+## Concrete Steps: What is Visualizing our Information?
+```{r, echo = F}
+
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Width, col = Species)) + geom_jitter(size = 4 ) +
+ labs(x = "Sepal Length", y = "Petal Width", title = "Iris Sepal Length in Relation to Petal Width, by Species")
+```
+<style type='text/css'>
+img {
+    max-height: 560px;
+    max-width: 964px;
+}
+</style>
+## Sepal Plot
+  - Shows us at a glance what the relationship is between flower parts across three species of flower
+  - What does our data show us?
+
+## Our Data, Visualized
+![Based on Diversion Data from 2012-2016](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/bar_race_status.jpg)
+
+##  Methods
+  *  Tidy Data
+  *  Statisical Analysis
+  *  Understaning the problem
+
+## Tools
+![The code behind this presentation](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/rstudio.png)
+
+## Data Science for the Juvenile Court
+![End Game: Explaining this!](/Users/marty/Dropbox (Personal)/codingProjects/R/DataScience for the Court 101/JuvenileIntakes-byRegion.png)
+
+  

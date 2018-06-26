@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Literacy</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Martin Gleason, MS" />
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <link rel="stylesheet" href="pro_presentation.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Data Literacy
+## Or A Data 101 Training for Juvenile Probation Staff
+### Martin Gleason, MS
+
+---
+
+
+
+
+# Data Literacy: A Data 101 Training for Juvenile Probation Staff
+06-26-18
+
+---
+
+#Training Ground Rules
+*  Take care of your clients and cases  
+*  Two breaks are built in, but get up and go if you got to go
+*  Ask questions, even ones that seem obvious
+*  Be willing to be challenged
+
+---
+
+#Learning Objectives:
+*  To become fluent with the language of data
+*  To think critically about data
+*  To become familiar with the fundamentals of OUR data
+    + What we collect
+    + How we collect it
+    + Why we need it
+*  What we can do to improve our Data Quality
+*  To discover what you want to learn next
+
+---
+class: center, middle
+# Expectations
+![What do you want to learn today?](imgs/schoolHouseRock.gif)
+
+What do **you** want to learn today?
+---
+class: center
+background-image: url(imgs/howdoyouusedata.gif)
+background-size: auto 200%;
+
+# What Is Data? 
+
+What questions do you have about data?
+---
+# The "Bro" Map
+![Bro-map](imgs/bro.gif)
+
+*  Excercise 1: How do you use data?
+    + Take five minutes to note how you use personal **or** probation data
+    + Can be alone or in a group 
+--
+* Who wants to share how they use data?
+
+---
+# Data or Information
+*  Data: Facts, figures, and other abstract representations of the world
+  + Height
+  + Weight
+  + Number of Charges
+  + Length of Term of Probation
+  
+* Information: Data that has been processed, given structure, and context
+
+--
+  + Risk Level
+--
+
+      - Credit
+--
+
+      - Probation
+--
+  + Body Mass Index (BMI)
+  
+--
+      - [Far From Perfect Model](https://www.npr.org/templates/story/story.php?storyId=106268439)
+
+---
+# Do we need data?
+--
+
+*  Personal Experience
+
+
+
+*  Professional/Clinical Judgement
+--
+
+    + *Challenging it can be easily interpreted as a personal attack*
+--
+ 
+* *A better question: What data do we need?*    
+
+
+---
+*  Think of data and information as a new language that requires fluency
+class: left
+![Language](imgs/DataScienceTriangleAnalogy.jpg)
+class:right
+![Data](imgs/DataScienceTriangle.jpg)
+---
+# The Language of Data
+## Types of Data
+### Quantitative
+*  Discrete: only specific values matter for that data
+*  Continuous: All values
+*  *Examples?*
+
+---
+### Qualitative
+
+*  *Examples?*
+
+--
+*  Binary: Yes/No
+
+--
+*  Nominal: Names with no particular meaning
+
+--
+*  Ordinal: Scores or Ranks
+
+--
+
+*  Count/Ratio: Items per Area/Volume
+
+---
+## Descriptive Statistics
+&gt;  "Descriptive statistics are brief descriptive coefficients that summarize a given data set, which can be either a representation of the entire or sample population. Descriptive statistics are broken down into measures of central tendency and measures of variability (spread)."
+
+* Descriptive statistics describe the population or sample
+
+---
+
+### Measures of Central Tendency and Variablity
+* Mean: Average
+* Median: Equal point in the distribution
+* Mode: Most Frequent number
+* Range: Minimum number to maximum number
+* Variance: How spread out the data points are
+* Standard Deviation: The distance, in the same unit, between data points
+
+---
+
+### Example
+![](slides_on_data_files/figure-html/TrickQuestion_one-1.png)&lt;!-- --&gt;
+---
+
+![](slides_on_data_files/figure-html/TrickQuestion_two-1.png)&lt;!-- --&gt;
+---
+![](slides_on_data_files/figure-html/trickquestionThree-1.png)&lt;!-- --&gt;
+---
+### Chart Example
+&lt;table class="table table-striped" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Average Height &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Median Height &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Shortest &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Tallest &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Standard Deviation, in Centimeters &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 170.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 169.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 57 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 197 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 12.00794 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+### Excercise: How did I mislead you?
+* Look at the graphs below and point out what you would do different?
+
+![](slides_on_data_files/figure-html/side_by_side-1.png)&lt;!-- --&gt;![](slides_on_data_files/figure-html/side_by_side-2.png)&lt;!-- --&gt;
+---
+### Correct Way to Visualize
+![](slides_on_data_files/figure-html/correct_viz-1.png)&lt;!-- --&gt;&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;All Measurements in cm&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; sex &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Average Height &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Median Height &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Shortest &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Tallest &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Count &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Standard Deviation &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; F &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 163.7411 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 165 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 57 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 178 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 112 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11.643925 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; M &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 178.0114 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 178 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 163 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 197 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 88 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.440701 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+*The previous chart and graph will be on a single slide*
+---
+# Take a break
+![Be back in 10!](imgs/break.gif)
+---
+# Quick Recap
+* Measures of Central Tendency.
+* Measures of Variance.
+* How to think critically about data?
+
+---
+# The Stastical Model
+* A representation of what the data tells us
+* The goal of:
+  + Big Data
+  + Machine Learning
+  + AI
+  + **Other buzzwords?**
+
+![Animated Regression](imgs/boosting-algo-7.gif)
+
+---
+
+# Four Kinds of Analytics
+* Descriptive: What
+* Diagnostic: Why? 
+* Predictive: What if?
+* Prescriptive: Best course?
+
+---
+
+## Diagnostic Analytics
+* Why did this happen?
+![Do not be afraid to ask why.](imgs/why.gif)
+
+---
+## Predictive Analytics
+* What could happen
+  + Chances of winning an election
+  + Chances of developing an illness
+  + Chance at re-offending
+  
+---  
+## Examples
+![Regression: Beyond Our Scope](imgs/superimportantoutcome.png)
+---
+
+# Perscriptive  Analytics
+* What is the best course of action?
+![The Process](imgs/Prescriptive_Analytics_process.png)
+
+## Excercise: Examples of Perscriptive Statistics
+![As difficult as finding an...](imgs/unicorn.gif)
+
+---
+# How does we collect data or information?
+ - * Personal Experiences
+ - * TV
+* Newspapers
+* Radio
+* Conversations
+* Comparison shopping
+* Google
+
+
+# How does the Court collect data?
+* Forms
+* Reports
+* Studies
+* JEMS
+* I-Clear
+* Clerks
+* Promise
+* Databases
+* *Spreadsheets*
+
+# Tidy Data
+![Thanks Hadley!](imgs/hadley.jpg)
+
+* Each variable forms a column.
+* Each observation forms a row.
+* Each cell is atomic.
+* Each type of observational unit forms a table.
+
+# Examples of Spreadsheet Use
+* We use spreadsheets for:
+  + Collection, cleaning, results, analysis
+  + Provide structure to our data
+  + Share data/information
+  + Data Analysis
+
+# Excercise 2: Critique this spreadsheet
+![Made up data: Also a handout.](imgs/fakeSheet.png)
+
+# Excercise 2: Results 2
+* Cells are not atomic
+* Missing values
+* Variable formats within entries
+
+---
+# Why we need data
+* Evidence Based Practices
+* Performance based budgeting
+* Risk Level and Classification
+
+---
+# Where Do We Go From Here
+* We have the language, now what are the goals
+
+--
+* With your table, discuss where you want to go from here
+
+--
+* Use your SMART goals!
+
+---
+# Thank you
+![Thank You](imgs/anyQuestionsDavidSPumpkins.gif)
+
+* Please fill out your evaluation forms
+* Email [martin.gleason@cookcountil.gov)](mailto: martin.gleason@cookcountil.gov) if you have questions, comments, or misgivings
+
+
+
+
+---
+# Sources and Further Reading
+* [Tidy data Paper](https://vita.had.co.nz/papers/tidy-data.pdf)
+* [Data Literacy](https://www.gartner.com/webinar/3702517)
+* [Algorithmic Sentencing](https://www.wired.com/2017/04/courts-using-ai-sentence-criminals-must-stop-now/)
+* [Descriptive, predictive, prescriptive](https://halobi.com/blog/descriptive-predictive-and-prescriptive-analytics-explained/)
+* [https://twitter.com/nlj/status/1004066012063559686](https://twitter.com/nlj/status/1004066012063559686)
+* [4 kinds of analytics](https://www.kdnuggets.com/2017/07/4-types-data-analytics.html)
+* [Super Important Outcome](https://blogs.uoregon.edu/rclub/2016/04/05/plotting-your-logistic-regression-models/)
+* [Minitab: Flavors of Data](https://surfstat.anu.edu.au/surfstat-home/1-1-1.html)
+* [Statistical Model](https://en.wikipedia.org/wiki/Statistical_model)
+* [BMI](https://www.npr.org/templates/story/story.php?storyId=106268439)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

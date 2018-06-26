@@ -1,0 +1,33 @@
+/* importing the following fonts: Spectral for headings, scope one, for body. */
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Nobile|Spectral');
+
+/* Currently, the root trick does not work.
+:root{
+	--blue: #193993;
+  --grey: #9b9292;
+  --black: #0e0705;
+  --green: #a5d3c1;
+  --gold: #eebf48;
+
+}
+*/
+
+body{
+	background-color: coral;
+	}
+
+h1{
+	font-family: Spectral, serif;
+	color: #193993;
+}
+
+h2{
+	font-family: Spectral, serif;
+	color: #eebf48;
+}
+
+ul,ol,dl,p{
+	font-family: 'Nobile', sans-serif;}
+
+</style type>
