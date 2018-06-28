@@ -4,16 +4,15 @@ subtitle: "Or A Data 101 Training for Juvenile Probation Staff"
 author: "Martin Gleason, MS"
 output:
   xaringan::moon_reader:
-    css: "pro_presentation.css"
+    css: ["pro_presentation.css", "libs/remark-css/default.css"]
     self_contained: no
     lib_dir: libs
     nature:
+      beforeInit: "macros.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-    
 ---
-
 ```{r, packages, include=T, echo=FALSE, message = FALSE, warning = FALSE}
 library(tidyverse)
 library(lubridate)
@@ -25,300 +24,418 @@ source("/Users/marty/Dropbox (Personal)/Coding Projects/R/DataScience for the Co
 # figure out how to make sure it works on windows or mac
 
 ```
-
+class:center
 # Data Literacy: A Data 101 Training for Juvenile Probation Staff
 `r today() %>% format("%m-%d-%y")`
-
 ---
+.center[#Training Ground Rules]
 
-#Training Ground Rules
 *  Take care of your clients and cases  
+
 *  Two breaks are built in, but get up and go if you got to go
+
 *  Ask questions, even ones that seem obvious
+
 *  Be willing to be challenged
-
 ---
+.center[#Learning Objectives:]
 
-#Learning Objectives:
 *  To become fluent with the language of data
+
 *  To think critically about data
+
 *  To become familiar with the fundamentals of OUR data
     + What we collect
     + How we collect it
     + Why we need it
 *  What we can do to improve our Data Quality
+
 *  To discover what you want to learn next
-
 ---
-class: center, middle
-# Expectations
-![What do you want to learn today?](imgs/schoolHouseRock.gif)
 
-What do **you** want to learn today?
+.center[# Expectations]
+![](imgs/schoolHouseRock.gif)
+
+
+.bottom[.center[What do **you** want to learn today?]]
 ---
 class: center
-background-image: url(imgs/howdoyouusedata.gif)
-background-size: auto 200%;
-
 # What Is Data? 
+![](imgs/howdoyouusedata.gif)
 
-What questions do you have about data?
+
+
+
+.bottom[.center[What questions do you have about data?]]
 ---
-# The "Bro" Map
-![Bro-map](imgs/bro.gif)
+class: center
+# The Bro-Map
 
-*  Excercise 1: How do you use data?
-    + Take five minutes to note how you use personal **or** probation data
-    + Can be alone or in a group 
+.pull-left[
+![](imgs/bro.gif)]
+
+.pull-right[.left[
+Excercise 1: How do you use data?
+
+{{content}}
+]]
+
 --
-* Who wants to share how they use data?
 
+* Can be alone or in a group.
+{{content}}
+
+* Take five minutes to note how you use personal **or** probation data.
 ---
+class: center
+# Sharing is Caring
+![](imgs/giphy.mp4)
+
+
+.center[Who wants to share how they use data?]
+---
+class: center
 # Data or Information
-*  Data: Facts, figures, and other abstract representations of the world
-  + Height
-  + Weight
-  + Number of Charges
-  + Length of Term of Probation
   
-* Information: Data that has been processed, given structure, and context
+.pull-left[.left[Data: 
+* Facts, figures, and other abstract representations of the world
+  + Height
+  
+  + Weight
+  
+  + Number of Charges
+  
+  + Length of Term of Probation]]
 
---
+.pull-right[.left[Information:
+* Data that has been processed, given structure, and context
+  + Charts and graphs
+  
   + Risk Level
---
-
+  
       - Credit
---
-
+      
       - Probation
---
+      
   + Body Mass Index (BMI)
   
---
-      - [Far From Perfect Model](https://www.npr.org/templates/story/story.php?storyId=106268439)
-
+      - [Far From Perfect Model](https://www.npr.org/templates/story/story.php?storyId=106268439)]]
 ---
-# Do we need data?
+# How much data do we need?
 --
 
-*  Personal Experience
 
+*  Pros and cons of Personal Experience
+--
 
 
 *  Professional/Clinical Judgement
 --
 
-    + *Challenging it can be easily interpreted as a personal attack*
+
+  + *Challenging either can be easily interpreted as a personal attack*
 --
  
-* *A better question: What data do we need?*    
+ 
+* **Therefore, a better question is: What data do we need?**    
 
 
+.center[![](imgs/toomuch.gif)]
 ---
-*  Think of data and information as a new language that requires fluency
-class: left
-![Language](imgs/DataScienceTriangleAnalogy.jpg)
-class:right
-![Data](imgs/DataScienceTriangle.jpg)
----
+class: center
 # The Language of Data
-## Types of Data
-### Quantitative
+.pull-left[![:scale 80%](imgs/DataScienceTriangleAnalogy.jpg)]
+.pull-right[![:scale 80%](imgs/DataScienceTriangle.jpg)]
+##Think of data and information as a new language that requires fluency
+---
+# Types of Data
+--
+
+.left[## Quantitative]
 *  Discrete: only specific values matter for that data
 *  Continuous: All values
 *  *Examples?*
 
----
-### Qualitative
-
-*  *Examples?*
-
 --
+
+.left[## Qualitative]
+*  *Examples?*
+--
+
 *  Binary: Yes/No
 
---
 *  Nominal: Names with no particular meaning
 
---
 *  Ordinal: Scores or Ranks
 
---
-
 *  Count/Ratio: Items per Area/Volume
+---
+class: center
+background-image: url(imgs/coffee.jpg)
+background-size: cover;
+#The Coffee Example
 
 ---
-## Descriptive Statistics
+class:center
+# Descriptive Statistics
+
 >  "Descriptive statistics are brief descriptive coefficients that summarize a given data set, which can be either a representation of the entire or sample population. Descriptive statistics are broken down into measures of central tendency and measures of variability (spread)."
 
-* Descriptive statistics describe the population or sample
 
 ---
-
-### Measures of Central Tendency and Variablity
+# Measures of Central Tendency and Variablity
 * Mean: Average
+--
+
+
 * Median: Equal point in the distribution
-* Mode: Most Frequent number
+--
+
+
+* Mode: Most frequent number
+--
+
+
 * Range: Minimum number to maximum number
+--
+
+
 * Variance: How spread out the data points are
+--
+
+
 * Standard Deviation: The distance, in the same unit, between data points
-
 ---
-
-### Example
-```{r, TrickQuestion_one, include= TRUE, echo = F}
+class:center
+# Total Height
+```{r, TrickQuestion_one, include= TRUE, echo = F, fig.align='center', fig.height = 6, fig.width = 8,message = FALSE}
 total_height_bar
 ```
 ---
-
-```{r, TrickQuestion_two, include= TRUE, echo = F}
+class:center
+## Density of Height
+```{r, TrickQuestion_two, include= TRUE, fig.align='center', fig.height = 6, fig.width = 8, echo = F}
 total_height
 ```
 ---
-```{r, trickquestionThree, include = TRUE, echo = FALSE, message = FALSE}
+class:center
+## Measures of Central Tendency with Height
+```{r, trickquestionThree, include = TRUE, echo = FALSE, fig.align='center', fig.height = 6, fig.width = 8, message = FALSE}
 bad_proof
 ```
 ---
-### Chart Example
-```{r, badchart, include = TRUE, echo = FALSE, warning = FALSE}
+## Chart Example
+```{r, badchart, include = TRUE, echo = FALSE, warning = FALSE, fig.align='center', fig.height = 6, fig.width = 6, message = FALSE}
 bad_height %>% kable() %>% kable_styling("striped", "bordered", full_width = TRUE)
 ```
-### Excercise: How did I mislead you?
-* Look at the graphs below and point out what you would do different?
+---
+class:center
+## Excercise 2: How did I mislead you?
+```{r, side_by_side, include = TRUE, warning = FALSE, out.width="49%", fig.height = 15, fig.width = 15, fig.show = "hold", message = FALSE, echo = FALSE}
+total_height + theme(axis.text = element_text(family = "Nobile", size = 48 ),
+        axis.title = element_text(family = "Nobile", size = 48 ))
 
-```{r, side_by_side, include = TRUE, warning = FALSE, fig.show = "asis", echo = FALSE}
-total_height
-total_height_bar
+total_height_bar + theme(axis.text = element_text(family = "Nobile", size = 48 ),
+        axis.title = element_text(family = "Nobile", size = 48 ))
 ```
 ---
-### Correct Way to Visualize
-```{r, correct_viz, include = TRUE, echo = FALSE, message = FALSE}
+## Correct Way to Visualize
+```{r, correct_viz, include = TRUE, echo = FALSE, out.width="50%", message = FALSE, fig.align='center', fig.height = 4, fig.width = 6, message = FALSE}
 
 total_height_sex_histogram
 total_height_chart %>% kable(caption = "All Measurements in cm") %>% 
   kable_styling("striped", "bordered", full_width = FALSE)
   
 ```
-*The previous chart and graph will be on a single slide*
 ---
+class: center
+background-image: url(imgs/break.gif)
 # Take a break
-![Be back in 10!](imgs/break.gif)
 ---
-# Quick Recap
+.center[# The Training So Far]
 * Measures of Central Tendency.
+
 * Measures of Variance.
-* How to think critically about data?
+
+* **How to think critically about data?**
 
 ---
 # The Stastical Model
+
 * A representation of what the data tells us
 * The goal of:
+  
   + Big Data
+ 
   + Machine Learning
+ 
   + AI
-  + **Other buzzwords?**
-
-![Animated Regression](imgs/boosting-algo-7.gif)
-
+  
+  
+--
+.center[![:scale 55%](imgs/boosting-algo-7.gif)]
 ---
-
 # Four Kinds of Analytics
-* Descriptive: What
+
+* Descriptive: What?
+    + Very similiar to descriptive statistics.
+    
 * Diagnostic: Why? 
+
 * Predictive: What if?
+
 * Prescriptive: Best course?
 
 ---
-
 ## Diagnostic Analytics
 * Why did this happen?
-![Do not be afraid to ask why.](imgs/why.gif)
-
+.center[![Do not be afraid to ask why.](imgs/why.gif)]
 ---
 ## Predictive Analytics
 * What could happen
+
   + Chances of winning an election
+  
   + Chances of developing an illness
+  
   + Chance at re-offending
   
----  
-## Examples
-![Regression: Beyond Our Scope](imgs/superimportantoutcome.png)
----
+  
+--
 
+.center[![:scale 60%](imgs/superimportantoutcome.png)]
+---
 # Perscriptive  Analytics
 * What is the best course of action?
-![The Process](imgs/Prescriptive_Analytics_process.png)
-
-## Excercise: Examples of Perscriptive Statistics
-![As difficult as finding an...](imgs/unicorn.gif)
-
+.center[![The Process](imgs/Prescriptive_Analytics_process.png)]
 ---
-# How does we collect data or information?
- - * Personal Experiences
- - * TV
-* Newspapers
+## Excercise 3: Discussion of Perscriptive Statistics
+--
+
+.center[![:scale 55%](imgs/unicorn.gif)]
+---
+# How do we collect data or information?
+--
+
+* Personal Experiences
+
+* TV
+
+* Newspapers 
+
 * Radio
+
 * Conversations
+
 * Comparison shopping
+
 * Google
 
+* Facebook
+---
+# How does the *Court* collect data?
 
-# How does the Court collect data?
 * Forms
+--
+
+
 * Reports
+--
+
+
 * Studies
+--
+
+
 * JEMS
-* I-Clear
-* Clerks
-* Promise
+--
+
+
+* Other Systems
+    + I-Clear
+    + Clerks
+    + State's Attorney
+    + Schools
+    + Hospital
+    + Promise
+--
+
+    
 * Databases
+--
+
+
 * *Spreadsheets*
-
-# Tidy Data
-![Thanks Hadley!](imgs/hadley.jpg)
-
+---
+.center[# Tidy Data]
 * Each variable forms a column.
 * Each observation forms a row.
 * Each cell is atomic.
 * Each type of observational unit forms a table.
 
-# Examples of Spreadsheet Use
+--
+
+.center[![Sad Cat](imgs/messy-data-makin-me-sad-.jpg)]
+---
+.center[# Spreadsheet Use]
 * We use spreadsheets for:
+
   + Collection, cleaning, results, analysis
+  
   + Provide structure to our data
+  
   + Share data/information
+  
   + Data Analysis
 
-# Excercise 2: Critique this spreadsheet
-![Made up data: Also a handout.](imgs/fakeSheet.png)
+* In our office, we use Excel
+  + Google Sheets
 
-# Excercise 2: Results 2
+  + And, occassionally, tables in Word
+  
+  + What should we use Spreadsheets for?
+---
+class: center
+# Excercise 4: Critique This Spreadsheet
+.center[![:scale 75%](imgs/fakeSheet.png)]
+---
+# Excercise 4: Takeaways
+
 * Cells are not atomic
+
 * Missing values
+
 * Variable formats within entries
 
+
 ---
-# Why we need data
+# Why Do We Need Data: Takeaways
+
 * Evidence Based Practices
+
 * Performance based budgeting
+
 * Risk Level and Classification
 
 ---
 # Where Do We Go From Here
-* We have the language, now what are the goals
+* We have the language, now what are *our* goals?
+
 
 --
-* With your table, discuss where you want to go from here
+* With your table, discuss where you want to go from here.
+
 
 --
+
+
 * Use your SMART goals!
-
 ---
 # Thank you
-![Thank You](imgs/anyQuestionsDavidSPumpkins.gif)
+.center[![Thank You](imgs/anyQuestionsDavidSPumpkins.gif)]
 
 * Please fill out your evaluation forms
-* Email [martin.gleason@cookcountil.gov)](mailto: martin.gleason@cookcountil.gov) if you have questions, comments, or misgivings
+* Email [martin.gleason@cookcountil.gov)](mailto: martin.gleason@cookcountil.gov) if you have questions, comments, or vague misgivings
 
 
 
@@ -335,3 +452,4 @@ total_height_chart %>% kable(caption = "All Measurements in cm") %>%
 * [Minitab: Flavors of Data](https://surfstat.anu.edu.au/surfstat-home/1-1-1.html)
 * [Statistical Model](https://en.wikipedia.org/wiki/Statistical_model)
 * [BMI](https://www.npr.org/templates/story/story.php?storyId=106268439)
+* [Coffee Info Graphic](http://www.hammadakbar.com/marketing/content-creation-in-a-slump-here-are-5-ways-qualitative-data-can-help/)

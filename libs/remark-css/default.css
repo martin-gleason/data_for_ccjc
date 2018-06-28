@@ -15,21 +15,25 @@ a, a > code {
   color: #d6d6d6;
   text-shadow: 0 0 20px #333;
 }
+
+.remark-container{
+	background-color: #a5d3c1;
+	}
+
 .inverse h1, .inverse h2, .inverse h3 {
   color: #f3f3f3;
 }
 /* Two-column layout */
 .left-column {
-  color: #777;
-  width: 20%;
-  height: 92%;
+  width: 45%;
   float: left;
+  padding-top: 1em;
 }
 .left-column h2:last-of-type, .left-column h3:last-child {
   color: #000;
 }
 .right-column {
-  width: 75%;
+  width: 45%;
   float: right;
   padding-top: 1em;
 }

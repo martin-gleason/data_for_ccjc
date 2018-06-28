@@ -13,21 +13,68 @@
 }
 */
 
-body{
+.remark-container{
 	background-color: coral;
 	}
 
 h1{
 	font-family: Spectral, serif;
 	color: #193993;
+	font-size: 2em;
+	text-align: center;
 }
 
 h2{
 	font-family: Spectral, serif;
 	color: #eebf48;
+	font-size: 1.25em;
+	font-style: italic;
+	text-align: center;
+}
+
+h3{
+font-family: Spectral, serif;
+	color: #eebf48; 
+	font-style: italic;
+	text-align: center;
 }
 
 ul,ol,dl,p{
-	font-family: 'Nobile', sans-serif;}
+	font-family: 'Nobile', sans-serif;
+	text-align: left;}
+	
+
+ul,ol,dl{
+font-size: .85em;}
+
+div.my-header {
+	background-color: #F77A00;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffb76b), color-stop(0%,#ffa73d), color-stop(0%,#ffffff), color-stop(10%,#ffffff), color-stop(25%,#F77A00), color-stop(100%,#F77A00));
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 30px;
+	width: 100%;
+	text-align: left;
+}
+
+.image-half{
+	height: 50%;
+	width: 50%;
+}
+
+.image-quarter{
+	height: 25%;
+	width: 25%;
+}
+
+.image-ten{
+	height: 10%;
+	width: 10%;
+	}
+
+.left{
+	text-align:left !important;
+	}
 
 </style type>
