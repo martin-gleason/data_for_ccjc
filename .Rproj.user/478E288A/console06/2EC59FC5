@@ -108,3 +108,12 @@ usage: git rm [<options>] [--] <file>...
 Nothing specified, nothing added.
 Maybe you wanted to say 'git add .'?
 ]0;~/Dropbox (Personal)/Coding Projects/R/DataScience for the Court 101Knowhere:DataScience for the Court 101 marty$ git add .
+]0;~/Dropbox (Personal)/Coding Projects/R/DataScience for the Court 101Knowhere:DataScience for the Court 101 marty$ git push origin master
+To https://github.com/martin-gleason/data_for_ccjc
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/martin-gleason/data_for_ccjc'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;~/Dropbox (Personal)/Coding Projects/R/DataScience for the Court 101Knowhere:DataScience for the Court 101 marty$ git oys[K[K[Kpou[K[Kush --help
